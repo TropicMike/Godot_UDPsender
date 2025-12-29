@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://elcdpsf65hd5"]
+
+[ext_resource type="Script" uid="uid://g00sumchj2tg" path="res://udpsender.gd" id="1_pgcgp"]
+
+[node name="UDPsender" type="Node2D"]
+script = ExtResource("1_pgcgp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="IPContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="IPLabel" type="Label" parent="VBoxContainer/IPContainer"]
+layout_mode = 2
+text = "IP Address: "
+
+[node name="IPEdit" type="LineEdit" parent="VBoxContainer/IPContainer"]
+layout_mode = 2
+
+[node name="PortContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PortLabel" type="Label" parent="VBoxContainer/PortContainer"]
+layout_mode = 2
+text = "Port: "
+
+[node name="PortEdit" type="LineEdit" parent="VBoxContainer/PortContainer"]
+layout_mode = 2
+
+[node name="SendCommandButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "SendLightsOn"
+
+[node name="CustomContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CustomLabel" type="Label" parent="VBoxContainer/CustomContainer"]
+layout_mode = 2
+text = "Custom Message: "
+
+[node name="CustomMessageEdit" type="LineEdit" parent="VBoxContainer/CustomContainer"]
+layout_mode = 2
+
+[node name="SendCustomButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Send Custom Message"
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Ready"
